@@ -1,6 +1,9 @@
 ﻿cmake_minimum_required (VERSION 3.14)
 project(CPP)
 
+include(GNUInstallDirs)
+
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/Modules/")
 set(CMAKE_CXX_STANDARD 17)
 
 set(CPP_LINK_LIBRARIES
@@ -22,9 +25,11 @@ set(CPP_RAZSTAVA_SOURCES
 
 set(CPP_HEADERS
 	${CPP_RAZSTAVA_HEADERS}
+	src/utils.h
 )
 set(CPP_SOURCES
 	${CPP_RAZSTAVA_SOURCES}
+	src/utils.cpp
 )
 
 set(CPP_EXECUTABLE_HEADERS
