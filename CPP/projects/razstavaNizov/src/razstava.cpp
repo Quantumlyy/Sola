@@ -1,7 +1,11 @@
-#include "razstava.h";
+#include "Razstava.h";
 #include <iostream>
 
-int razstava() {
-	std::cout << "Test" << std::endl;
-	return 0;
-}
+#include "../../../src/Commander.h"
+
+class Razstava : public Commander {
+	void Execute() {
+		std::cout << "Heh" << std::endl;
+		return;
+	}
+};

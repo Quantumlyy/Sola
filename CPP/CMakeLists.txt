@@ -9,27 +9,22 @@ set(CMAKE_CXX_STANDARD 17)
 set(CPP_LINK_LIBRARIES
 )
 
-if(NOT WIN32)
-    set(CPP_LINK_LIBRARIES
-      ${CPP_LINK_LIBRARIES}
-      m
-    )
-endif()
-
 set(CPP_RAZSTAVA_HEADERS
-	projects/razstavaNizov/src/razstava.h
+	projects/razstavaNizov/src/Razstava.h
 )
 set(CPP_RAZSTAVA_SOURCES
-	projects/razstavaNizov/src/razstava.cpp
+	projects/razstavaNizov/src/Razstava.cpp
 )
 
 set(CPP_HEADERS
 	${CPP_RAZSTAVA_HEADERS}
 	src/utils.h
+	src/Commander.h
 )
 set(CPP_SOURCES
 	${CPP_RAZSTAVA_SOURCES}
 	src/utils.cpp
+	src/Commander.cpp
 )
 
 set(CPP_EXECUTABLE_HEADERS

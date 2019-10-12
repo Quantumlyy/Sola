@@ -1,13 +1,16 @@
 ﻿#include <iostream>
 #include <string>
 #include <set>
+#include <map>
 #include <algorithm>
 #include "utils.h"
+#include "Commander.h"
 
-#include "../projects/razstavaNizov/src/razstava.h"
+#include "../projects/razstavaNizov/src/Razstava.h"
 
 int main() {
 	std::set<std::string> possibleProjects { "razstava" };
+	std::map<std::string, Commander> projectMap{ std::pair("razstava", Razstava()) };
 	std::string requestedProject = "";
 
 	cprint("Izberi projekt...");
@@ -25,8 +28,8 @@ int main() {
 	}
 
 	std::cout << "Zaganjam: " << requestedProject << std::endl;
-	
-	if (requestedProject == "razstava") razstava();
+
+	projectMap[requestedProject].Execute();
 
 	return 0;
 }

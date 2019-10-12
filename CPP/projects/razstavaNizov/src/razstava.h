@@ -1,6 +1,11 @@
 #ifndef CPP_RAZSTAVA_H
 #define CPP_RAZSTAVA_H
 
-int razstava();
+#include "../../../src/Commander.h"
+
+class Razstava : public Commander {
+public:
+	void Execute();
+};
 
 #endif CPP_RAZSTAVA_H // CPP_RAZSTAVA_H
