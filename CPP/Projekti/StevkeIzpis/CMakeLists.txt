@@ -1,0 +1,36 @@
+﻿cmake_minimum_required (VERSION 3.12)
+project(CPPStevkeIzpis)
+
+include(GNUInstallDirs)
+
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/Modules/")
+set(CMAKE_CXX_STANDARD 17)
+
+set(CPP_RESOURCES
+)
+
+file(COPY ${CPP_RESOURCES} DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+
+set(CPP_LINK_LIBRARIES
+)
+
+set(CPP_HEADERS
+  src/Utils.h
+)
+set(CPP_SOURCES
+  src/Utils.cpp
+)
+
+set(CPP_EXECUTABLE_HEADERS
+  ${CPP_HEADERS}
+)
+set(CPP_EXECUTABLE_SOURCES
+  ${CPP_SOURCES}
+  src/main.cpp
+)
+set(CPP_EXECUTABLE_LINK_LIBRARIES
+  ${CPP_LINK_LIBRARIES}
+)
+
+add_executable(CPPStevkeIzpis ${CPP_EXECUTABLE_HEADERS} ${CPP_EXECUTABLE_SOURCES})
+target_link_libraries(CPPStevkeIzpis ${CPP_EXECUTABLE_LINK_LIBRARIES})

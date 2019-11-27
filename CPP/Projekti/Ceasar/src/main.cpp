@@ -5,6 +5,10 @@
 #include "Utils.h"
 
 int main() {
+
+	std::system("chcp 65001");
+	std::system("CLS");
+
 	std::string alphabet = "abcdefghijklmnopqrstuvwxyz ";
 	std::string input = "";
 	std::string setMoveFactor = "";

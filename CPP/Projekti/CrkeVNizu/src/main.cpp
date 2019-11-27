@@ -18,6 +18,7 @@ int main() {
 		charMap.insert(std::pair(letter, 0));
 	
 	for (auto l : input) {
+		l = std::tolower(l);
 		if (charMap.find(l) != charMap.end()) {
 			int count = charMap[l];
 			charMap[l]++;
