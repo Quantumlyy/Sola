@@ -10,9 +10,9 @@ int main() {
 	std::system("CLS");
 
 	std::string alphabet = "abcdefghijklmnopqrstuvwxyz ";
-	std::string input = "";
-	std::string setMoveFactor = "";
-	std::string output = "";
+	std::string input;
+	std::string setMoveFactor;
+	std::string output;
 
 	Utils::cPrint("Prosim vnesi stavek za sifriranje");
 	std::getline(std::cin, input);
@@ -25,9 +25,9 @@ int main() {
 		int moveFactor = std::stoi(setMoveFactor);
 
 		while ((found + moveFactor) >= alphabet.length())
-			moveFactor = moveFactor - alphabet.length();
+			moveFactor -= alphabet.length();
 
-		output = output + alphabet.at(moveFactor + found);
+		output +=  alphabet.at(moveFactor + found);
 	}
 
 	Utils::cPrint(output);
