@@ -1,5 +1,5 @@
-#ifndef CPP_CEASAR_UTILS_H
-#define CPP_CEASAR_UTILS_H
+#ifndef STEVKE_IZPIS_UTILS_H
+#define STEVKE_IZPIS_UTILS_H
 
 #include <string>
 
@@ -11,4 +11,4 @@ public:
 	static void cPrint();
 };
 
-#endif CPP_CEASAR_UTILS_H // CPP_CEASAR_UTILS_H
+#endif // STEVKE_IZPIS_UTILS_H
