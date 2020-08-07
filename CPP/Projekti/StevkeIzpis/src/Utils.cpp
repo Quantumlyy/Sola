@@ -2,7 +2,7 @@
 #include <iostream>
 #include <string>
 
-void Utils::cPrint(std::string str) {
+void Utils::cPrint(const std::string& str) {
 	std::cout << str << std::endl;
 }
 void Utils::cPrint(char charArray[]) {

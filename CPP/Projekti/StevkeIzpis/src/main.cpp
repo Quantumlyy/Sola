@@ -7,7 +7,7 @@
 #include "Utils.h"
 
 int main() {
-	std::string input = "";
+	std::string input;
 	std::string numbers = "1234567890";
 	std::list<char> orderNormal;
 	std::list<char> orderBack;
@@ -15,7 +15,7 @@ int main() {
 	Utils::cPrint("Vnesi stevilo");
 	std::getline(std::cin, input);
 
-	for (auto cha : input) {
+	for (auto &cha : input) {
 		if (numbers.find(cha) == std::string::npos) {
 			Utils::cPrint("Vnos vsebuje nekaj kaj ni stevilka");
 			Utils::cPrint();
@@ -28,11 +28,11 @@ int main() {
 	}
 
 	Utils::cPrint("Pravi red");
-	for (auto ele : orderNormal) std::cout << ele;
+	for (auto &ele : orderNormal) std::cout << ele;
 	std::cout << std::endl;
 
 	Utils::cPrint("Obrnjen red");
-	for (auto ele : orderBack) std::cout << ele;
+	for (auto &ele : orderBack) std::cout << ele;
 	std::cout << std::endl;
 
 	Utils::cPrint("Pritisni katerokoli tipko za nadeljevanje");
