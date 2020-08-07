@@ -6,9 +6,9 @@
 #include "Utils.h"
 
 int main() {
-	std::ofstream passFile;
+	std::ofstream passFile{};
 	std::string password = "admin ";
-	std::string input;
+	std::string input{};
 	int tries = 0;
 
 	passFile.open("geslo.txt");

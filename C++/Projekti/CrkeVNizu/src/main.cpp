@@ -6,8 +6,8 @@
 #include "Utils.h"
 
 int main() {
-	std::string input;
-	std::map<char, int> charMap;
+	std::string input{};
+	std::map<char, int> charMap{};
 	std::string alphabet = " abcdefghijklmnopqrstuvwxyz";
 
 	Utils::cPrint("Prosim vnesi stavek za analizo");

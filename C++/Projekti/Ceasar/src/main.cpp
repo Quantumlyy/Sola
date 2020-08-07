@@ -5,14 +5,13 @@
 #include "Utils.h"
 
 int main() {
-
 	std::system("chcp 65001");
 	std::system("CLS");
 
 	std::string alphabet = "abcdefghijklmnopqrstuvwxyz ";
-	std::string input;
-	std::string setMoveFactor;
-	std::string output;
+	std::string input{};
+	std::string setMoveFactor{};
+	std::string output{};
 
 	Utils::cPrint("Prosim vnesi stavek za sifriranje");
 	std::getline(std::cin, input);

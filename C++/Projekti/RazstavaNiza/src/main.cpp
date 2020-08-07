@@ -4,7 +4,7 @@
 #include "Utils.h"
 
 int main() {
-	std::string input;
+	std::string input{};
 
 	Utils::cPrint("Prosim vnesi niz za analizo");
 

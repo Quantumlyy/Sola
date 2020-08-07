@@ -7,10 +7,10 @@
 #include "Utils.h"
 
 int main() {
-	std::string input;
+	std::string input{};
 	std::string numbers = "1234567890";
-	std::list<char> orderNormal;
-	std::list<char> orderBack;
+	std::list<char> orderNormal{};
+	std::list<char> orderBack{};
 
 	Utils::cPrint("Vnesi stevilo");
 	std::getline(std::cin, input);
