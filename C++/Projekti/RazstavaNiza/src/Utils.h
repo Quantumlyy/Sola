@@ -1,5 +1,5 @@
-#ifndef CPP_RAZSTAVA_UTILS_H
-#define CPP_RAZSTAVA_UTILS_H
+#ifndef RAZSTAVA_UTILS_H
+#define RAZSTAVA_UTILS_H
 
 #include <string>
 
@@ -10,4 +10,4 @@ public:
 	static void cPrint(char cha);
 };
 
-#endif CPP_RAZSTAVA_UTILS_H // CPP_RAZSTAVA_UTILS_H
+#endif // RAZSTAVA_UTILS_H
