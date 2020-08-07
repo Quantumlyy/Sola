@@ -1,5 +1,5 @@
-#ifndef CPP_CRKE_UTILS_H
-#define CPP_CRKE_UTILS_H
+#ifndef CRKE_UTILS_H
+#define CRKE_UTILS_H
 
 #include <string>
 
@@ -10,4 +10,4 @@ public:
 	static void cPrint(char cha);
 };
 
-#endif // CPP_CRKE_UTILS_H
+#endif // CRKE_UTILS_H
