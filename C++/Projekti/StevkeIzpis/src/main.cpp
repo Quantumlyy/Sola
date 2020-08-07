@@ -7,6 +7,9 @@
 #include "Utils.h"
 
 int main() {
+    std::system("chcp 65001");
+    std::system("CLS");
+
 	std::string input{};
 	std::string numbers = "1234567890";
 	std::list<char> orderNormal{};

@@ -6,6 +6,9 @@
 #include "Utils.h"
 
 int main() {
+    std::system("chcp 65001");
+    std::system("CLS");
+
 	std::ofstream passFile{};
 	std::string password = "admin ";
 	std::string input{};
