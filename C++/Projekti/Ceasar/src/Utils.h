@@ -1,5 +1,5 @@
-#ifndef CPP_CEASAR_UTILS_H
-#define CPP_CEASAR_UTILS_H
+#ifndef CEASAR_UTILS_H
+#define CEASAR_UTILS_H
 
 #include <string>
 
@@ -10,4 +10,4 @@ public:
 	static void cPrint(char cha);
 };
 
-#endif //CPP_CEASAR_UTILS_H
+#endif // CEASAR_UTILS_H
