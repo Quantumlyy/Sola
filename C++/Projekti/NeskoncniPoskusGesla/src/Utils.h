@@ -1,5 +1,5 @@
-#ifndef CPP_CEASAR_UTILS_H
-#define CPP_CEASAR_UTILS_H
+#ifndef NESKONCNI_POSKUS_GESLA_UTILS_H
+#define NESKONCNI_POSKUS_GESLA_UTILS_H
 
 #include <string>
 
@@ -10,4 +10,4 @@ public:
 	static void cPrint(char cha);
 };
 
-#endif // CPP_CEASAR_UTILS_H
+#endif // NESKONCNI_POSKUS_GESLA_UTILS_H
