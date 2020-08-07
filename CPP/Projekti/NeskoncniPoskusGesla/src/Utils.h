@@ -10,4 +10,4 @@ public:
 	static void cPrint(char cha);
 };
 
-#endif CPP_CEASAR_UTILS_H // CPP_CEASAR_UTILS_H
+#endif // CPP_CEASAR_UTILS_H

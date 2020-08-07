@@ -8,13 +8,12 @@
 int main() {
 	std::ofstream passFile;
 	std::string password = "admin ";
-	std::string input = "";
-	bool guessed = false;
+	std::string input;
 	int tries = 0;
 
 	passFile.open("geslo.txt");
 
-	while (guessed != true) {
+	while (true) {
 		if (tries >= 3) {
 			password = std::to_string(std::rand());
 			passFile << password;
@@ -32,7 +31,6 @@ int main() {
 			continue;
 		}
 		Utils::cPrint("Geslo JE pravilno");
-		guessed = true;
 		break;
 	}
 
