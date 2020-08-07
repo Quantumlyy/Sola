@@ -5,7 +5,7 @@
 
 class Utils {
 public:
-	static void cPrint(std::string str);
+	static void cPrint(const std::string& str);
 	static void cPrint(char charArray[]);
 	static void cPrint(char cha);
 };
