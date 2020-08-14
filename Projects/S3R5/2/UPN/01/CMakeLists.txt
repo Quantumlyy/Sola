@@ -1,0 +1,16 @@
+project(2UPN01)
+
+set(2UPN01_HEADERS
+        )
+set(2UPN01_SOURCES
+        )
+
+set(2UPN01_EXECUTABLE_HEADERS
+        ${2UPN01_HEADERS}
+        )
+set(2UPN01_EXECUTABLE_SOURCES
+        ${2UPN01_SOURCES}
+        src/main.cpp
+        )
+
+add_executable(2UPN01 ${2UPN01_EXECUTABLE_HEADERS} ${2UPN01_EXECUTABLE_SOURCES})
