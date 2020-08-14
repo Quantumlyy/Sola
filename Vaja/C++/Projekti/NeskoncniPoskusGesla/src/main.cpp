@@ -2,6 +2,7 @@
 #include <fstream>
 #include <string>
 #include <cstdio>
+#include <time.h>
 
 int main() {
     std::system("chcp 65001");
@@ -23,7 +24,10 @@ int main() {
 
             std::ofstream passFileWrite ("geslo.txt");
             if (passFileWrite.is_open()) {
+
+                std::srand(time(0));
                 password = std::to_string(std::rand());
+
                 passFileWrite << password;
                 passFileWrite.close();
                 printf("Geslo se je spremenilo!");
