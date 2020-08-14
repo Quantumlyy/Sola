@@ -1,4 +1,4 @@
-// 02. Vaja Nejc Drobnic - Računske operacije (2UPN02)
+// 02. Vaja Nejc Drobnic - Računske operacije; Kalkulator (2UPN02Kalkulator)
 
 #include <cstdio>
 #include <cstdlib>
