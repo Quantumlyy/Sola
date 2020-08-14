@@ -3,42 +3,50 @@
 #include <string>
 #include <cstdio>
 
-#include "Utils.h"
-
 int main() {
     std::system("chcp 65001");
     std::system("CLS");
 
-	std::ofstream passFile{};
-	std::string password = "admin ";
+	std::string password{};
+
+    std::ifstream passFileRead ("geslo.txt");
+    if (passFileRead.is_open()) {
+        std::getline(passFileRead, password);
+        passFileRead.close();
+    } else password = "admin123";
+
 	std::string input{};
 	int tries = 0;
 
-	passFile.open("geslo.txt");
-
 	while (true) {
 		if (tries >= 3) {
-			password = std::to_string(std::rand());
-			passFile << password;
-			passFile.close();
-			Utils::cPrint("Geslo se je spremenilo!");
+
+            std::ofstream passFileWrite ("geslo.txt");
+            if (passFileWrite.is_open()) {
+                password = std::to_string(std::rand());
+                passFileWrite << password;
+                passFileWrite.close();
+                printf("Geslo se je spremenilo!");
+            }
+
 			break;
 		}
 
-		Utils::cPrint("Vnesi geslo");
+		printf("Vnesi geslo");
 		std::getline(std::cin, input);
 		
 		if (input != password) {
-			Utils::cPrint("Geslo NI pravilno");
+			printf("Geslo NI pravilno");
 			tries++;
 			continue;
 		}
-		Utils::cPrint("Geslo JE pravilno");
+
+		printf("Geslo JE pravilno");
 		break;
 	}
 
-	Utils::cPrint("Pritisni katerokoli tipko za nadeljevanje");
-	std::getchar();
+	printf("Pritisni katerokoli tipko za nadeljevanje");
+	getchar();
 
 	return EXIT_SUCCESS;
 }

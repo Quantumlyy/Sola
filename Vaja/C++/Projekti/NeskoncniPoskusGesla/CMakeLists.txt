@@ -1,16 +1,8 @@
-﻿cmake_minimum_required (VERSION 3.12)
-project(NeskoncniPoskusGesla)
-
-include(GNUInstallDirs)
-
-set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/Modules/")
-set(CMAKE_CXX_STANDARD 17)
+﻿project(NeskoncniPoskusGesla)
 
 set(NESKONCNI_POSKUS_GESLA_HEADERS
-  src/Utils.h
 )
 set(NESKONCNI_POSKUS_GESLA_SOURCES
-  src/Utils.cpp
 )
 
 set(NESKONCNI_POSKUS_GESLA_EXECUTABLE_HEADERS

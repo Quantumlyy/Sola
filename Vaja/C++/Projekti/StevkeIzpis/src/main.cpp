@@ -4,8 +4,6 @@
 #include <cstdio>
 #include <cstdlib>
 
-#include "Utils.h"
-
 int main() {
     std::system("chcp 65001");
     std::system("CLS");
@@ -15,14 +13,13 @@ int main() {
 	std::list<char> orderNormal{};
 	std::list<char> orderBack{};
 
-	Utils::cPrint("Vnesi stevilo");
+	printf("Vnesi stevilo\n");
 	std::getline(std::cin, input);
 
-	for (auto &cha : input) {
+	for (auto& cha : input) {
 		if (numbers.find(cha) == std::string::npos) {
-			Utils::cPrint("Vnos vsebuje nekaj kaj ni stevilka");
-			Utils::cPrint();
-			Utils::cPrint("Pritisni katerokoli tipko za nadeljevanje");
+            printf("Vnos vsebuje nekaj kaj ni stevilka\n\n");
+            printf("Pritisni katerokoli tipko za nadeljevanje\n");
 			std::getchar();
 			std::exit(1);
 		}
@@ -30,15 +27,15 @@ int main() {
 		orderBack.push_front(cha);
 	}
 
-	Utils::cPrint("Pravi red");
-	for (auto &ele : orderNormal) std::cout << ele;
+    printf("Pravi red\n");
+	for (auto& ele : orderNormal) std::cout << ele;
 	std::cout << std::endl;
 
-	Utils::cPrint("Obrnjen red");
-	for (auto &ele : orderBack) std::cout << ele;
+    printf("Obrnjen red\n");
+	for (auto& ele : orderBack) std::cout << ele;
 	std::cout << std::endl;
 
-	Utils::cPrint("Pritisni katerokoli tipko za nadeljevanje");
+    printf("Pritisni katerokoli tipko za nadeljevanje\n");
 	std::getchar();
 
 	return EXIT_SUCCESS;
