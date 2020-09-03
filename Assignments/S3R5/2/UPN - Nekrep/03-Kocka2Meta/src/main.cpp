@@ -7,13 +7,13 @@
 #include <stdlib.h>
 
 int main() {
-	std::system("chcp 65001");
-	std::system("CLS");
+  std::system("chcp 65001");
+  std::system("CLS");
 
-	std::srand(time(nullptr));
+  std::srand(time(nullptr));
 
-	printf("Kocka 1: %i\n", 1 + rand() % 6);
-        printf("Kocka 2: %i\n", 1 + rand() % 6);
+  printf("Kocka 1: %i\n", 1 + rand() % 6);
+  printf("Kocka 2: %i\n", 1 + rand() % 6);
 
-	return 0;
+  return 0;
 }

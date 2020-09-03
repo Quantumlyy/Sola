@@ -5,38 +5,40 @@
 #include <cstdlib>
 
 int main() {
-    std::system("chcp 65001");
-    std::system("CLS");
+  std::system("chcp 65001");
+  std::system("CLS");
 
-	std::string input{};
-	std::string numbers = "1234567890";
-	std::list<char> orderNormal{};
-	std::list<char> orderBack{};
+  std::string input{};
+  std::string numbers = "1234567890";
+  std::list<char> orderNormal{};
+  std::list<char> orderBack{};
 
-	printf("Vnesi stevilo\n");
-	std::getline(std::cin, input);
+  printf("Vnesi stevilo\n");
+  std::getline(std::cin, input);
 
-	for (auto& cha : input) {
-		if (numbers.find(cha) == std::string::npos) {
-            printf("Vnos vsebuje nekaj kaj ni stevilka\n\n");
-            printf("Pritisni katerokoli tipko za nadeljevanje\n");
-			std::getchar();
-			std::exit(1);
-		}
-		orderNormal.push_back(cha);
-		orderBack.push_front(cha);
-	}
+  for (auto &cha : input) {
+    if (numbers.find(cha) == std::string::npos) {
+      printf("Vnos vsebuje nekaj kaj ni stevilka\n\n");
+      printf("Pritisni katerokoli tipko za nadeljevanje\n");
+      std::getchar();
+      std::exit(1);
+    }
+    orderNormal.push_back(cha);
+    orderBack.push_front(cha);
+  }
 
-    printf("Pravi red\n");
-	for (auto& ele : orderNormal) std::cout << ele;
-	std::cout << std::endl;
+  printf("Pravi red\n");
+  for (auto &ele : orderNormal)
+    std::cout << ele;
+  std::cout << std::endl;
 
-    printf("Obrnjen red\n");
-	for (auto& ele : orderBack) std::cout << ele;
-	std::cout << std::endl;
+  printf("Obrnjen red\n");
+  for (auto &ele : orderBack)
+    std::cout << ele;
+  std::cout << std::endl;
 
-    printf("Pritisni katerokoli tipko za nadeljevanje\n");
-	std::getchar();
+  printf("Pritisni katerokoli tipko za nadeljevanje\n");
+  std::getchar();
 
-	return EXIT_SUCCESS;
+  return EXIT_SUCCESS;
 }

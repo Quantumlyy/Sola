@@ -5,21 +5,21 @@
 #include <iostream>
 
 int main() {
-	std::system("chcp 65001");
-	std::system("CLS");
+  std::system("chcp 65001");
+  std::system("CLS");
 
-	double Vrednost1{};
-	double Vrednost2{};
-        double Rezultat{};
+  double Vrednost1{};
+  double Vrednost2{};
+  double Rezultat{};
 
-	printf("Vnesi prvo število: ");
-	std::cin >> Vrednost1;
+  printf("Vnesi prvo število: ");
+  std::cin >> Vrednost1;
 
-	printf("Vnesi drugo število: ");
-	std::cin >> Vrednost2;
+  printf("Vnesi drugo število: ");
+  std::cin >> Vrednost2;
 
-	Rezultat = Vrednost1 + Vrednost2;
-        printf("Vaš rezultat je: %1.2f\n", Rezultat);
+  Rezultat = Vrednost1 + Vrednost2;
+  printf("Vaš rezultat je: %1.2f\n", Rezultat);
 
-	return 0;
+  return 0;
 }
