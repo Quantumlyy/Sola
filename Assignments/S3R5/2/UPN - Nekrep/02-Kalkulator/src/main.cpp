@@ -11,10 +11,10 @@ int main() {
   double Vrednost1{};
   double Vrednost2{};
 
-  printf("Vnesite prvo število:\n");
+  printf("Vnesite prvo število: ");
   std::cin >> Vrednost1;
 
-  printf("Vnesite drugo število:\n");
+  printf("Vnesite drugo število: ");
   std::cin >> Vrednost2;
 
   printf("Seštevek števil: %1.2f\n", Vrednost1 + Vrednost2);
