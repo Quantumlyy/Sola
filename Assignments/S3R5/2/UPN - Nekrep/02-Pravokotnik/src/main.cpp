@@ -5,8 +5,10 @@
 #include <iostream>
 
 int main() {
+#ifdef _WIN32
   std::system("chcp 65001");
   std::system("CLS");
+#endif //!_WIN32
 
   double Vrednost1{};
   double Vrednost2{};
