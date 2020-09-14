@@ -17,5 +17,5 @@ int main() {
   printf("Kocka 1: %i\n", 1 + rand() % 6);
   printf("Kocka 2: %i\n", 1 + rand() % 6);
 
-  return 0;
+  return EXIT_SUCCESS;
 }

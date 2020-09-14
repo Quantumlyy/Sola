@@ -24,5 +24,5 @@ int main() {
   printf("Diagonala: %1.2f mm\n",
          std::sqrt((Vrednost1 * Vrednost1) + (Vrednost2 * Vrednost2)));
 
-  return 0;
+  return EXIT_SUCCESS;
 }

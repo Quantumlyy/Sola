@@ -14,5 +14,5 @@ int main() {
   printf("Naslov\n");
   printf("Postna stevilka in Mesto\n");
 
-  return 0;
+  return EXIT_SUCCESS;
 }

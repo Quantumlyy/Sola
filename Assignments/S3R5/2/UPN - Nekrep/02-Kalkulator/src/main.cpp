@@ -24,5 +24,5 @@ int main() {
   printf("Zmnožek števil: %1.2f\n", Vrednost1 * Vrednost2);
   printf("Količnik števil: %1.2f\n", Vrednost1 / Vrednost2);
 
-  return 0;
+  return EXIT_SUCCESS;
 }

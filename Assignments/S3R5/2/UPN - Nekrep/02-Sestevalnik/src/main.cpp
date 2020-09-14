@@ -23,5 +23,5 @@ int main() {
   Rezultat = Vrednost1 + Vrednost2;
   printf("Vaš rezultat je: %1.2f\n", Rezultat);
 
-  return 0;
+  return EXIT_SUCCESS;
 }
