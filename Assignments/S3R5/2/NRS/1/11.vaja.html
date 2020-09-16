@@ -1,0 +1,112 @@
+<html lang="en" dir="ltr" prefix="og: https://ogp.me/ns#">
+    <head>
+        <title>Vaja 11</title>
+        <meta charset="utf-8" />
+        <link rel="shortcut icon" href="https://www.sers.si/favicon.ico">
+
+        <meta property="og:title" content="Vaja 11" />
+        <meta property="og:description" content="Pac moja stran iz sole i guess..." />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.sers.si/favicon.ico" />
+
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@quantumlytngld" />
+        <meta name="twitter:creator" content="@quantumlytngld" />
+    </head>
+    <body>
+        <div>
+            <h1>Prijavnica</h1>
+        </div>
+        <div>
+            <table>
+            <tr>
+                <td>
+                    Ime:
+                </td>
+                <td>
+                    <input type="text" name="ime">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Priimek:
+                </td>
+                <td>
+                    <input type="text" name="priimek">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Spol:
+                </td>
+                <td>
+                    <input type="radio" name="spol" value="moški" /> Moški
+                    <input type="radio" name="spol" value="ženski" /> Ženski <br />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Opis:
+                </td>
+                <td>
+                    <textarea name="opis" rows="5" cols="50"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Plačilo:
+                </td>
+                <td>
+                    <input type="checkbox" name="valuta" value="EUR" /> EUR <br />
+                    <input type="checkbox" name="valuta" value="USD" /> USD <br />
+                    <input type="checkbox" name="valuta" value="GBP" /> GBP <br />
+                    <input type="checkbox" name="valuta" value="CHF" /> CHF <br />
+                    <input type="checkbox" name="valuta" value="HRK" /> HRK
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Država:
+                </td>
+                <td>
+                    <form>
+                        <select name="dan" size="1">
+                                <option value="pon" selected="selected">
+                                    Slovenija
+                                </option>
+                                <option value="tor">
+                                    Avstrija
+                                </option>
+                                <option value="sre">
+                                    Nemčija
+                                </option>
+                                <option value="cet">
+                                    Anglija
+                                </option>
+                                <option value="pet">
+                                    ZDA
+                                </option>
+                                <option value="sob">
+                                    Hrvaška
+                                </option>
+                                <option value="ned">
+                                    Švica
+                                </option>
+                        </select>
+                    </form>
+                </td>
+            </tr>
+            </table>
+            <br />
+
+            <center>
+                <p>
+                    <input allign="center" type="submit" value="Pošlji prijavo"/>
+                </p>
+                <p>
+                    <input type="reset" value="Počisti prijavo" />
+                </p>
+            </center>
+        </div>
+    </body>
+</html>
