@@ -4,8 +4,34 @@
 #include <cstdlib>
 #include <iostream>
 
-constexpr unsigned int str2int(const char *str, int h = 0) {
-  return !str[h] ? 5381 : (str2int(str, h + 1) * 33) ^ str[h];
+inline char Operacija;
+
+double checkOperation(double Vrednost1, double Vrednost2) {
+  double Rezultat{};
+
+  printf("Vnesite računsko operacijo (+, -, *, /): ");
+  std::cin >> Operacija;
+
+  switch (Operacija) {
+    case '+':
+      Rezultat = Vrednost1 + Vrednost2;
+      break;
+    case '-':
+      Rezultat = Vrednost1 - Vrednost2;
+      break;
+    case '*':
+      Rezultat = Vrednost1 * Vrednost2;
+      break;
+    case '/':
+      Rezultat = Vrednost1 / Vrednost2;
+      break;
+    default:
+      std::cin.ignore(INT_MAX, '\n');
+      printf("Neveljavna operacija %c\nProgram vas bo znova prosil za operacijo\n\n", Operacija);
+      Rezultat = checkOperation(Vrednost1, Vrednost2);
+  }
+
+  return Rezultat;
 }
 
 int main() {
@@ -16,8 +42,6 @@ int main() {
 
   double Vrednost1{};
   double Vrednost2{};
-  std::string Operacija{};
-  double Rezultat{};
 
   printf("Vnesite prvo število: ");
   std::cin >> Vrednost1;
@@ -25,28 +49,10 @@ int main() {
   printf("Vnesite drugo število: ");
   std::cin >> Vrednost2;
 
-  printf("Vnesite računsko operacijo (+, -, *, /): ");
-  std::cin >> Operacija;
+  double Rezultat = checkOperation(Vrednost1, Vrednost2);
 
-  switch (str2int(Operacija.c_str())) {
-    case str2int("+"):
-      Rezultat = Vrednost1 + Vrednost2;
-      break;
-    case str2int("-"):
-      Rezultat = Vrednost1 - Vrednost2;
-      break;
-    case str2int("*"):
-      Rezultat = Vrednost1 * Vrednost2;
-      break;
-    case str2int("/"):
-      Rezultat = Vrednost1 / Vrednost2;
-      break;
-    default:
-      printf("Neveljavna opracija %s", Operacija.c_str());
-      exit(1);
-  }
-
-  printf("Vaš rezultat operacije %s je %1.4f", Operacija.c_str(), Rezultat);
+  printf("\nVaš rezultat operacije je %1.4f (%1.4f %c %1.4f)",
+		Rezultat, Vrednost1, Operacija, Vrednost2);
 
   return EXIT_SUCCESS;
 }
