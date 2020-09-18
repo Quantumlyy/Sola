@@ -1,15 +1,24 @@
 // 02. Vaja Nejc Drobnic - Računske operacije; Interaktivni Kalkulator (2UPN02InteraktivniKalkulator)
 
+#include <io.h>
 #include <cstdio>
 #include <cstdlib>
 #include <iostream>
 
-inline char Operacija;
+#define _O_U16TEXT 0x20000
 
-double checkOperation(double Vrednost1, double Vrednost2) {
+/*
+ * Description Oct Dec Hex HTML
+ * "latin small letter s with caron" 0541 353 0x161 &scaron;
+ * "latin small letter c with caron" 0415 269 0x10D &#269;
+ */
+
+char Operacija;
+
+inline double checkOperation(double Vrednost1, double Vrednost2) {
   double Rezultat{};
 
-  printf("Vnesite računsko operacijo (+, -, *, /): ");
+  wprintf(L"Vnesite ra\415unsko operacijo (+, -, *, /): ");
   std::cin >> Operacija;
 
   switch (Operacija) {
@@ -35,23 +44,20 @@ double checkOperation(double Vrednost1, double Vrednost2) {
 }
 
 int main() {
-#ifdef _WIN32
-  std::system("chcp 65001");
-  std::system("CLS");
-#endif //!_WIN32
+  _setmode(_fileno(stdout), _O_U16TEXT);
 
   double Vrednost1{};
   double Vrednost2{};
 
-  printf("Vnesite prvo število: ");
+  wprintf(L"Vnesite prvo \541tevilo: ");
   std::cin >> Vrednost1;
 
-  printf("Vnesite drugo število: ");
+  wprintf(L"Vnesite drugo \541tevilo: ");
   std::cin >> Vrednost2;
 
   double Rezultat = checkOperation(Vrednost1, Vrednost2);
 
-  printf("\nVaš rezultat operacije je %1.4f (%1.4f %c %1.4f)",
+  wprintf(L"\nVa\541 rezultat operacije je %1.4f (%1.4f %c %1.4f)",
 		Rezultat, Vrednost1, Operacija, Vrednost2);
 
   return EXIT_SUCCESS;
