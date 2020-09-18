@@ -5,7 +5,7 @@
 #include <cstdlib>
 #include <iostream>
 
-#define _O_U16TEXT 0x20000
+constexpr int _O_U16TEXT = 0x20000;
 
 /*
  * Description Oct Dec Hex HTML
