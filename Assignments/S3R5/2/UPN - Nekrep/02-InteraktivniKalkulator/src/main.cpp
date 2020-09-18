@@ -1,11 +1,17 @@
 // 02. Vaja Nejc Drobnic - Računske operacije; Interaktivni Kalkulator (2UPN02InteraktivniKalkulator)
 
+#ifdef _WIN32
 #include <io.h>
+#endif
 #include <cstdio>
 #include <cstdlib>
 #include <iostream>
 
+#ifdef _WIN32
 constexpr int _O_U16TEXT = 0x20000;
+#elif __linux__
+constexpr int INT_MAX = 2147483647;
+#endif
 
 /*
  * Description Oct Dec Hex HTML
@@ -36,7 +42,7 @@ inline double checkOperation(double Vrednost1, double Vrednost2) {
       break;
     default:
       std::cin.ignore(INT_MAX, '\n');
-      printf("Neveljavna operacija %c\nProgram vas bo znova prosil za operacijo\n\n", Operacija);
+      wprintf(L"Neveljavna operacija %c\nProgram vas bo znova prosil za operacijo\n\n", Operacija);
       Rezultat = checkOperation(Vrednost1, Vrednost2);
   }
 
@@ -44,7 +50,12 @@ inline double checkOperation(double Vrednost1, double Vrednost2) {
 }
 
 int main() {
+#ifdef _WIN32
   _setmode(_fileno(stdout), _O_U16TEXT);
+#elif __linux__
+  std::locale oldLocale;
+  setlocale(LC_ALL, "en_US.UTF-8");
+#endif
 
   double Vrednost1{};
   double Vrednost2{};
@@ -59,6 +70,10 @@ int main() {
 
   wprintf(L"\nVa\541 rezultat operacije je %1.4f (%1.4f %c %1.4f)",
 		Rezultat, Vrednost1, Operacija, Vrednost2);
+
+#ifdef __linux__
+  setlocale(LC_ALL, oldLocale.name().c_str());
+#endif
 
   return EXIT_SUCCESS;
 }
