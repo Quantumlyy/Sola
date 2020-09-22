@@ -2,14 +2,13 @@
 
 #ifdef _WIN32
 #include <io.h>
-#endif
 #include <cstdio>
+#endif
 #include <cstdlib>
 #include <iostream>
 
-#ifdef _WIN32
 constexpr int _O_U16TEXT = 0x20000;
-#elif __linux__
+#ifdef __linux__
 constexpr int INT_MAX = 2147483647;
 #endif
 
