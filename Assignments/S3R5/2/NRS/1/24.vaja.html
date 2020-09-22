@@ -1,0 +1,43 @@
+<html lang="en" dir="ltr" prefix="og: https://ogp.me/ns#">
+    <head>
+        <title>Vaja 24</title>
+        <meta charset="utf-8" />
+        <link rel="shortcut icon" href="https://www.sers.si/favicon.ico">
+
+        <meta property="og:title" content="Vaja 24" />
+        <meta property="og:description" content="Pac moja stran iz sole i guess..." />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.sers.si/favicon.ico" />
+
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@quantumlytngld" />
+        <meta name="twitter:creator" content="@quantumlytngld" />
+    </head>
+    <body>
+        <h1>
+            Liki na Canvas platnu:
+        </h1>
+        <canvas id="myCanvas" width="1000" height="1000">
+            To besedilo se prikaže v primeru, da vaš brskalnik ne podpira HTML5 Canvas.
+        </canvas>
+        <script>
+            const canvas = document.getElementById('myCanvas');
+            const context = canvas.getContext('2d');
+
+            // #region Nested Squares
+            context.fillStyle = 'red';
+            context.fillRect(0, 0, 200, 200);
+            context.fillStyle = 'yellow';
+            context.fillRect(20, 20, 160, 160);
+            context.fillStyle = 'blue';
+            context.fillRect(40, 40, 120, 120);
+            // #endregion Nested Squares
+            // #region Square and Stick
+            context.fillStyle = 'green';
+            context.fillRect(300, 160, 160, 160);
+            context.fillStyle = 'purple';
+            context.fillRect(340, 100, 80, 280);
+            // #endregion Square and Stick
+        </script>
+    </body>
+</html>
