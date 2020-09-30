@@ -113,8 +113,8 @@
                 <tr>
                     <td class="siva">
                         <br />
-                        <input type="button" value="Preveri pravilnost odgovorov!" name="button">
-                        <input type="reset" value="Ponovno" name="reset"><br />
+                        <input type="button" value="Preveri pravilnost odgovorov!" name="button" onclick="izracunajRezultat(this.form)" />
+                        <input type="reset" value="Ponovno" name="reset" /><br />
                         <br />
                         <strong>Odstotne točke = </strong><input name="percentage" size="15"><br />
                         <br />
@@ -124,5 +124,8 @@
                 </tr>
             </table>
         </form>
+
+        <script type="text/javascript" src="1.answers.js"></script>
+        <script type="text/javascript" src="1.results.js"></script>
     </body>
 </html>

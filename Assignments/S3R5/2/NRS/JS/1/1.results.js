@@ -1,7 +1,7 @@
 //koda JavaScript, ki izračuna rzultate testa
 
-var steviloVprasanj = 10;
-var steviloOdgovorov = 3;
+const steviloVprasanj = 10;
+const steviloOdgovorov = 3;
 
 function izracunajRezultat(form) {
 	let tocke = 0;
@@ -28,5 +28,6 @@ function izracunajRezultat(form) {
 	for (i = 1; i <= steviloVprasanj; i++) {
 		pravilniOdgovor += i + `. ${odgovor[i-1]}\r\n`;
 	}
+
 	form.solutions.value = pravilniOdgovor;
 }
