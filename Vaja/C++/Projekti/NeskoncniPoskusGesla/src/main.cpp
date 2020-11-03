@@ -2,14 +2,9 @@
 #include <fstream>
 #include <string>
 #include <cstdio>
-#include <time.h>
+#include <random>
 
 int main() {
-#ifdef _WIN32
-  std::system("chcp 65001");
-  std::system("CLS");
-#endif //!_WIN32
-
   std::string password{};
 
   std::ifstream passFileRead("geslo.txt");
@@ -24,31 +19,32 @@ int main() {
 
   while (true) {
     if (tries >= 3) {
-
       std::ofstream passFileWrite("geslo.txt");
       if (passFileWrite.is_open()) {
+        std::random_device rd;
+        std::mt19937 mt(rd());
+        std::uniform_real_distribution<double> dist(1, 256);
 
-        std::srand(time(nullptr));
-        password = std::to_string(std::rand());
+        password = std::to_string((int)dist(mt));
 
         passFileWrite << password;
         passFileWrite.close();
-        printf("Geslo se je spremenilo!");
+        printf("Geslo se je spremenilo!\n");
       }
 
       break;
     }
 
-    printf("Vnesi geslo");
+    printf("Vnesi geslo ");
     std::getline(std::cin, input);
 
     if (input != password) {
-      printf("Geslo NI pravilno");
+      printf("Geslo NI pravilno\n");
       tries++;
       continue;
     }
 
-    printf("Geslo JE pravilno");
+    printf("Geslo JE pravilno\n");
     break;
   }
 
